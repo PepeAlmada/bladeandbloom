@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book a Chair — Blade &amp; Bloom</title>
+<meta name="description" content="Request an appointment at Blade &amp; Bloom. Pick a service, a barber and a time, or call (555) 123-4567.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='25' x='4' font-size='26' font-family='Georgia' font-style='italic' fill='%23D24E7A'>%26</text></svg>">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="rail" aria-hidden="true"><span class="rail__mark">Confirmed by text</span></div>
+
+<header class="masthead">
+  <div class="masthead__in">
+    <a class="wordmark" href="index.html">Blade <span class="amp">&amp;</span> Bloom</a>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="team.html">Barbers</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Visit</a>
+      <a class="btn btn--sm" href="book.html" aria-current="page">Book a chair</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="pagehead">
+    <div class="shell">
+      <p class="crumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Book</p>
+      <h1>Book a <em>chair.</em></h1>
+      <p>Tell us what you want and when. We confirm by text within one business hour. Prefer to talk? Call (555) 123-4567.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell split split--sidebar">
+
+      <div data-reveal>
+        <p class="eyebrow">Appointment request</p>
+        <form class="form" id="booking-form" novalidate>
+
+          <div class="form__row form__row--2">
+            <div class="field">
+              <label for="name">Your name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="phone">Mobile number</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+              <p class="field__hint">We text the confirmation here.</p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="email">Email, optional</label>
+            <input type="email" id="email" name="email" autocomplete="email">
+          </div>
+
+          <div class="field">
+            <label for="service">Service</label>
+            <select id="service" name="service" required>
+              <optgroup label="Haircuts">
+                <option>Classic Men&rsquo;s Cut — $25</option>
+                <option>Skin Fade / Taper Fade — $30</option>
+                <option>Buzz Cut — $15</option>
+                <option>Kids Cut, under 12 — $18</option>
+                <option>Senior Cut, 65+ — $20</option>
+                <option>Women&rsquo;s Short Style Cut — $35</option>
+              </optgroup>
+              <optgroup label="Beard &amp; grooming">
+                <option>Beard Trim — $15</option>
+                <option>Beard Sculpting + Razor Finish — $25</option>
+                <option>Hot Towel Shave — $30</option>
+                <option>Beard + Haircut Combo — $40</option>
+              </optgroup>
+              <optgroup label="Treatments">
+                <option>Shampoo &amp; Scalp Massage — $10</option>
+                <option>Color / Grey Coverage — $35+</option>
+                <option>Keratin Treatment, short hair — $50+</option>
+              </optgroup>
+              <optgroup label="Packages">
+                <option>The Gentleman&rsquo;s — $60</option>
+                <option>The Executive — $45</option>
+                <option>The Little Man — $20</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <fieldset class="fieldset">
+            <legend>Barber</legend>
+            <div class="choices">
+              <label class="choice"><input type="radio" name="barber" value="No preference" checked><span>No preference</span></label>
+              <label class="choice"><input type="radio" name="barber" value="Rosa"><span>Rosa</span></label>
+              <label class="choice"><input type="radio" name="barber" value="Theo"><span>Theo</span></label>
+              <label class="choice"><input type="radio" name="barber" value="Marisol"><span>Marisol</span></label>
+              <label class="choice"><input type="radio" name="barber" value="Sam"><span>Sam</span></label>
+            </div>
+            <p class="field__hint">Everyone&rsquo;s days are listed on the <a href="team.html">barbers page</a>.</p>
+          </fieldset>
+
+          <div class="form__row form__row--2">
+            <div class="field">
+              <label for="date">Preferred date</label>
+              <input type="date" id="date" name="date" required>
+              <p class="field__hint">Closed Sundays.</p>
+            </div>
+            <div class="field">
+              <label for="time">Preferred time</label>
+              <select id="time" name="time" required>
+                <option>9:00 AM</option><option>10:00 AM</option><option>11:00 AM</option>
+                <option>12:00 PM</option><option>1:00 PM</option><option>2:00 PM</option>
+                <option>3:00 PM</option><option>4:00 PM</option><option>5:00 PM</option>
+                <option>6:00 PM</option><option>7:00 PM</option>
+              </select>
+              <p class="field__hint">Last slot is 7 PM weekdays, 5 PM Saturday.</p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="notes">Anything we should know</label>
+            <textarea id="notes" name="notes" rows="3" placeholder="First visit, a reference photo, accessibility needs, a kid coming along."></textarea>
+          </div>
+
+          <p class="form__note">Requesting a time is not a confirmed booking until we reply. Need to cancel? Call any time — no fee, we just ask for a heads-up.</p>
+
+          <button class="btn" type="submit">Send request</button>
+
+          <p class="form__status" id="booking-status" role="status" tabindex="-1" hidden></p>
+        </form>
+      </div>
+
+      <aside class="stack" data-reveal>
+        <div>
+          <p class="eyebrow">Faster options</p>
+          <h3 class="display" style="font-size:1.7rem">Walk in, or just call.</h3>
+          <p style="margin-top:.8rem">Walk-ins are welcome every open hour. Weekends fill by mid-morning, so Friday and Saturday are worth booking.</p>
+          <a class="btn btn--ghost" href="tel:+15551234567">Call (555) 123-4567</a>
+        </div>
+
+        <dl class="factlist">
+          <dt>Hours</dt>
+          <dd>
+            <ul class="hours">
+              <li data-day="1,2,3,4,5"><span>Mon &ndash; Fri</span><span>9:00 AM &ndash; 8:00 PM</span></li>
+              <li data-day="6"><span>Saturday</span><span>9:00 AM &ndash; 6:00 PM</span></li>
+              <li data-day="0" data-closed><span>Sunday</span><span>Closed</span></li>
+            </ul>
+          </dd>
+          <dt>How long it takes</dt>
+          <dd>Buzz 15 min · fade 40 min · shave 35 min · package 60&ndash;75 min.</dd>
+          <dt>Payment</dt>
+          <dd>Cash, debit, credit and mobile pay. Pay after, at the counter.</dd>
+          <dt>Loyalty</dt>
+          <dd>Ten haircuts, the eleventh free. Ask for a stamp card on your first visit.</dd>
+        </dl>
+      </aside>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="shell">
+    <div class="foot__grid">
+      <div>
+        <a class="wordmark" href="index.html" style="text-decoration:none">Blade <span class="amp">&amp;</span> Bloom</a>
+        <p class="foot__blurb">Barbershop and hair salon. 128 Alder Street, Rosewood District. Since 2014.</p>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="services.html">Services &amp; prices</a></li>
+          <li><a href="team.html">Barbers</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <ul>
+          <li><a href="contact.html">Find us</a></li>
+          <li><a href="book.html">Book a chair</a></li>
+          <li><a href="tel:+15551234567">(555) 123-4567</a></li>
+          <li><a href="mailto:hello@bladeandbloom.example">hello@bladeandbloom.example</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <ul class="hours" style="font-size:.85rem">
+          <li data-day="1,2,3,4,5"><span>Mon &ndash; Fri</span><span>9 &ndash; 8</span></li>
+          <li data-day="6"><span>Sat</span><span>9 &ndash; 6</span></li>
+          <li data-day="0" data-closed><span>Sun</span><span>Closed</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot__base">
+      <span>&copy; <span data-year>2026</span> Blade &amp; Bloom</span>
+      <span>Cash · Debit · Credit · Mobile pay</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
